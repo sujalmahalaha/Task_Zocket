@@ -1,6 +1,5 @@
 "use client";
 
-const unusedVar = 'This will not trigger an error';
 import { useTaskStore } from "../../store/taskStore";
 import { useState } from "react";
 import AiChat from "../../components/AiChat";
