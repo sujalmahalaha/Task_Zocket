@@ -18,7 +18,7 @@ export default function Dashboard() {
     }
   };
 
-  const getStatusColor = (status) => {
+  const getStatusColor = (status: string) => {
     switch (status) {
       case 'todo':
         return 'bg-amber-50 text-amber-700';
