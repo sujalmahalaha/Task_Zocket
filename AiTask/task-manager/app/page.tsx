@@ -138,7 +138,7 @@
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const unusedVar = 'This will not trigger an error';
 import { useState } from "react";
-import { useAuth } from "../../context/AuthContext";
+import { useAuth } from "../context/AuthContext";
 import { useRouter } from "next/navigation";
 import { Eye, EyeOff, LogIn, Loader2 } from "lucide-react";
 import Link from "next/link";
