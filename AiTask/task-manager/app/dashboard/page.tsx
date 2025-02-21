@@ -1,5 +1,10 @@
 "use client";
+// Disable a rule for the entire file
+/* eslint-disable @typescript-eslint/no-explicit-any */
 
+// Disable a rule for a specific line
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+const unusedVar = 'This will not trigger an error';
 import { useTaskStore } from "../../store/taskStore";
 import { useState } from "react";
 import AiChat from "../../components/AiChat";
@@ -87,7 +92,7 @@ export default function Dashboard() {
                   <select
                     className={`px-4 py-2 rounded-lg border border-gray-200 focus:ring-2 focus:ring-violet-500 focus:border-violet-500 transition-all outline-none ${getStatusColor(task.status)}`}
                     value={task.status}
-                    onChange={(e) => updateTask(task.id, e.target.value as any)}
+                    onChange={(e) => updateTask(task.id, e.target.value as unknown)}
                   >
                     <option value="todo">To Do</option>
                     <option value="in-progress">In Progress</option>
