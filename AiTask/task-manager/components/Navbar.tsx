@@ -20,10 +20,6 @@ export default function Navbar() {
     }
     }, [user, router]);
 
-  function handleLogout(event: React.MouseEvent<HTMLButtonElement>): void {
-    throw new Error("Function not implemented.");
-  }
-
   return (
     <nav className="bg-white border-b border-gray-200 fixed w-full top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -107,11 +103,17 @@ export default function Navbar() {
               Dashboard
             </Link>
             <button
-              onClick={handleLogout}
+              onClick={() => {
+                // Add your logout logic here
+                console.log("User logged out");
+                // Example: Clear user session and redirect to login page
+                // sessionStorage.clear();
+                // window.location.href = "/login";
+              }}
               className="w-full text-left px-3 py-2 text-base font-medium text-red-600 hover:bg-red-50 rounded-md transition-colors"
             >
-              Logout
-            </button>
+            Logout
+          </button>
           </div>
         </div>
       )}

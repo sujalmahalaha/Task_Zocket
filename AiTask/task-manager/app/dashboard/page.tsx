@@ -1,9 +1,5 @@
 "use client";
-// Disable a rule for the entire file
-/* eslint-disable @typescript-eslint/no-explicit-any */
 
-// Disable a rule for a specific line
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const unusedVar = 'This will not trigger an error';
 import { useTaskStore } from "../../store/taskStore";
 import { useState } from "react";
