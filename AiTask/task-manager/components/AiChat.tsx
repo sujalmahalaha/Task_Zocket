@@ -5,7 +5,7 @@ import { Send, Bot, Loader2 } from "lucide-react";
 
 export default function AiChat() {
   const [input, setInput] = useState("");
-  const [messages, setMessages] = useState([]);
+  const [messages, setMessages] = useState<{ type: string; content: string }[]>([]);
   const [loading, setLoading] = useState(false);
 
   const handleAskAI = async () => {
@@ -33,7 +33,7 @@ export default function AiChat() {
     }, 1500);
   };
 
-  const handleKeyPress = (e) => {
+  const handleKeyPress = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === 'Enter' && !e.shiftKey) {
       e.preventDefault();
       handleAskAI();

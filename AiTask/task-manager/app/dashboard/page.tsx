@@ -92,7 +92,7 @@ export default function Dashboard() {
                   <select
                     className={`px-4 py-2 rounded-lg border border-gray-200 focus:ring-2 focus:ring-violet-500 focus:border-violet-500 transition-all outline-none ${getStatusColor(task.status)}`}
                     value={task.status}
-                    onChange={(e) => updateTask(task.id, e.target.value as unknown)}
+                    onChange={(e) => updateTask(task.id, e.target.value as "todo" | "in-progress" | "done")}
                   >
                     <option value="todo">To Do</option>
                     <option value="in-progress">In Progress</option>
